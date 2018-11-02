@@ -145,8 +145,8 @@ public class RestAPI {
 	
 
 	@GetMapping("/Complaints/tower/{id}/download")
-    public ModelAndView download(@PathVariable("id") int towerId) {
-        return new ModelAndView("pdfView","complaint", complaintServ.getComplaintByTower(towerId));
+    public ModelAndView exldownload(@PathVariable("id") int towerId) {
+        return new ModelAndView("excelView","complaint", complaintServ.getComplaintByTower(towerId));
 	}
 
 	@PostMapping("/addComplaint")

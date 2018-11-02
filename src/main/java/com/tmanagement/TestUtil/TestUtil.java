@@ -1,4 +1,4 @@
-package com.tmanagement.testutil;
+package com.tmanagement.TestUtil;
 
 
 import java.io.IOException;

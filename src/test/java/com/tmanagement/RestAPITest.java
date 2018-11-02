@@ -40,7 +40,7 @@ import com.tmanagement.service.ComplaintService;
 import com.tmanagement.service.CsaService;
 import com.tmanagement.service.TowerService;
 import com.tmanagement.service.UserService;
-import com.tmanagement.testutil.TestUtil;
+import com.tmanagement.TestUtil.TestUtil;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = RestAPI.class)

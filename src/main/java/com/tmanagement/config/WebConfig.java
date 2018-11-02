@@ -8,8 +8,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
-
-import com.tmanagement.viewResolver.PdfViewResolver;
+import com.tmanagement.viewResolver.ExcelViewResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
         // Define all possible view resolvers
         List<ViewResolver> resolvers = new ArrayList<>();
-        resolvers.add(pdfViewResolver());
+        resolvers.add(excelViewResolver());
         resolver.setViewResolvers(resolvers);
         return resolver;
     }
@@ -44,8 +43,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
      * generate pdf output for an object content
      */
     @Bean
-    public ViewResolver pdfViewResolver() {
-        return new PdfViewResolver();
+    public ViewResolver excelViewResolver() {
+        return new ExcelViewResolver();
     }
+
 
 }
